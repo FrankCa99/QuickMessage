@@ -13,8 +13,11 @@ window.onload = function() {
 
         user = new User(name, lastname, email, username, password);
 
-        validator = new DataValidator(user);
+        validator = new DataValidator();
         user_is_valid = validator.validate_user(user);
-        console.log(user);
+        console.log(user_is_valid)
+        if (user_is_valid){
+
+        }
     }
 }

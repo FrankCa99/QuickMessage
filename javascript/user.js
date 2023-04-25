@@ -5,7 +5,6 @@ class User {
         this.email = email;
         this.username = username;
         this.password = password;
-        console.log(this.username);
     }
     getJSONData() {
         let user_as_json = JSON.stringify(this);
