@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Message App test</title>
-    <script src="javascript/index.js"></script>
+    <script src="javascript/client.js"></script>
     <script src="javascript/data_validator.js"></script>
     <script src="javascript/user.js"></script>
     <script src="javascript/message.js"></script>
+    <link rel="stylesheet" href="css/sign_up_styles.css">
 </head>
 <body>
-    <!-- create a button -->  
-    <button id="button">Click me</button>
+    <form class="form-container">
+        <h2 id="title">Sign Up</h2>
+        <input type="text" name="name" id="name" class="text_input" placeholder="Name" value="Franklin">
+        <input type="text" name="lastname" id="lastname" class="text_input" placeholder="Last Name" value="Coello">
+        <input type="text" name="email" id="email" class="text_input" placeholder="Email" value="franklincoello1@gmail.com">
+        <input type="text" name="username" id="username" class="text_input" placeholder="Username" value="frankCa99">
+        <input type="text" name="password" id="password" class="text_input" placeholder="Password" value="frank_ca99">
+        <button name="submit" id="submit_button" class="submit button">Send</button>
+    </form>
 </body>
 </html>
