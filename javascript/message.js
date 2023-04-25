@@ -1,6 +1,6 @@
 class Message{
-    constructor(username, message, targeted_user){
-        this.username = username;
+    constructor(user, message, targeted_user){
+        this.user = user;
         this.message = message;
         this.targeted_user = targeted_user
     }
