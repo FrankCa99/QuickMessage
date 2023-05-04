@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>username here</title>
+    <link rel="stylesheet" href="../css/chat.css">
+  </head>
+  <body>
+    <!-- main container -->
+    <div class="container">
+      <!--target user status and username -->
+      <div class="target_user_container">
+        <p id="target_user_username">Other user</p>
+        <span id="target_user_status_online"></span>
+      </div>
+      <!-- shared messages container -->
+      <div class="messages_container">
+        <ul id="messages_list">
+          <li><p id="target_user_message">This is the first message</p></li>
+          <li><p id="this_user_message">This is the second message</p></li>
+          <li><p id="target_user_message">This is the third message</p></li>
+          <li><p id="target_user_message">This is the fourth message</p></li>
+          <li><p id="target_user_message">This is the fifth message</p></li>
+          <li><p id="this_user_message">This is the sixth message</p></li>
+          <li><p id="this_user_message">This is the seventh message</p></li>
+          <li><p id="this_user_message">This is the eigth message</p></li>
+          <li><p id="target_user_message">And this is a long message that may not fit in the text container</p></li>
+        </ul>
+      </div>
+      <!-- new message container -->
+      <div class="new_message_container">
+        <input id="current_message_input" type="text" placeholder="Type your message...">
+        <button id="send_message_button" type="button">Send</button>
+      </div>
+    </div> <!-- main container end -->
+  </body>
+</html>
