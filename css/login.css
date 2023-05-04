@@ -1,0 +1,96 @@
+body{
+  display: grid;
+  font-family: monospace;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+.container{
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  box-shadow: -2px 2px 5px #aaa;
+  color: #aaa;
+  display: grid;
+  height: 300px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 220px 30px;
+  justify-items: center;
+  justify-self: center;
+  margin: 50px;
+  user-select: none;
+  width: 50%;
+}
+.title_container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  border-bottom: 1px solid #aaa;
+  justify-items: center;
+  width: 100%;
+}
+.form_container{
+  background-color: #ddd;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  width: 100%;
+}
+.sign_in_link_container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  width: 100%;
+}
+#login_title{
+  margin: 0;
+  align-self: center;
+}
+#username_input{
+  align-self: flex-end;
+}
+#password_input{
+  align-self: center;
+}
+#username_input, #password_input{
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 5px 0;
+  color: #888;
+  font-size: 14px;
+  height: 30px;
+  margin: 0 ;
+  outline: none;
+  padding: 0 10px;
+  width: 80%;
+}
+#username_input::placeholder, #password_input::placeholder{
+  color: #aaa;
+}
+#login_button{
+  align-self: flex-start;
+  background-color: #aaa;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  height: 25px;
+  margin: 0;
+  padding: 5px;
+  width: 100px;
+}
+#info{
+  align-self: center;
+}
+#link_to{
+  cursor: pointer;
+  color: #888;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
