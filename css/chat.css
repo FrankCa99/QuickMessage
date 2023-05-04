@@ -19,7 +19,6 @@ li{
   text-align: center;
 }
 p{
-  border-radius: 5px;
   display: block;
   word-wrap: break-word;
   width: 50%;
@@ -97,12 +96,16 @@ p{
 }
 #this_user_message{
   background: #eee;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 5px ;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   margin-left: 48%;
 }
 #target_user_message{
   background: #ccc;
+  border-radius: 0 5px 5px 5px ;
+  border: 1px solid #aaa;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   margin-left: 2%;
