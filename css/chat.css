@@ -120,14 +120,15 @@ p{
   width: 100%;
 }
 #current_message_input{
-  border: none;
+  background-color: #eee;
+  border: 1px solid #aaa;
   border-radius: 0 0 0 5px;
-  color: #aaa;
+  color: #888;
   outline: none;
   padding: 5px;
 }
 #current_message_input::placeholder{
-  color: #bbb;
+  color: #aaa;
 }
 #send_message_button{
   background-color: #aaa;
