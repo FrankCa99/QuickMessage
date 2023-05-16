@@ -1,0 +1,20 @@
+:root{
+  /* Colors */
+  --GreyColor: #c8d2d1;
+  --LightGreen: #68904d;
+  --DarkGreen: #14471e;
+  --LightOrange: #ee9b01;
+  --DarkOrange: #da6a00;
+  /* Sizes */
+  --buttonWidth: 100px;
+  --buttonHeight: 25px;
+  /* radius */
+  --buttonRadius: 5px;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+button{
+  cursor: pointer;
+}

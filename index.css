@@ -1,0 +1,28 @@
+body{
+  background: var(--GreyColor);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+}
+.QMButton{
+  width: var(--buttonWidth);
+  height: var(--buttonHeight);
+  color: #fff;
+  border: none;
+  border-radius: var(--buttonRadius);
+}
+#sign_in_button{
+  background-color: var(--LightOrange);
+  justify-self: right;
+}
+#sign_up_button{
+  background-color: var(--LightGreen);
+}
+/* when cursor is over button */
+#sign_in_button:hover{
+  background-color: var(--DarkOrange);
+}
+#sign_up_button:hover{
+  background-color: var(--DarkGreen);
+}
