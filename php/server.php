@@ -1,27 +1,12 @@
 <?php
-  header('Content-Type: text/event-stream');
-  header('Cache-Control: no-cache');
-
-  $json = file_get_contents('php://input');
-  $user = json_decode($json);
-
-  $users_folder_path = "../users";
-  $users_count_path = $users_folder_path . "/user_count.txt";
-
-  $user_count = update_file($users_count_path, folder_content_count($users_folder_path) - 3);
-
-  if (isset($user)){
-    mkdir($users_folder_path . "/" . $user->name . $user_count);
-  }
-  echo "retry: 1000\n";
-  echo "data: There are {$user_count} users in the server\n\n";
-  flush();
-  function update_file($file_path, $data){
-    file_put_contents($file_path, $data);
-    return file_get_contents($file_path);
-  }
-  function folder_content_count($folder_path){
-    return count(scandir($folder_path));
-  }
-  if(connection_aborted()) exit();
+  $rawData = file_get_contents('php://input');
+  $requestData = json_decode($rawData);
+  $user = json_decode($requestData->user);
+  if($requestData->type == "userExistance")echo is_dir("../users/" . $user->id);// checks if a user exist
+  else if($requestData->type == "userPrivateData"){
+    $filepath = "../users/" . $user->id . "/private_info.json";
+    $handle = fopen($filepath, "r");
+    $userData = fread(fopen($filepath, "r"), filesize($filepath));
+    echo $userData;
+  } // returns the user private data base on the user Id
 ?>

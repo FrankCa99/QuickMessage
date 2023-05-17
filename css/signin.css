@@ -41,7 +41,7 @@ p{
   justify-items: center;
   width: 100%;
 }
-.sign_in_link_container{
+.error_container{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -88,9 +88,6 @@ p{
   margin: 0;
   padding: 5px;
   width: 100px;
-}
-#info{
-  align-self: center;
 }
 #link_to{
   cursor: pointer;

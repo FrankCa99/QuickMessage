@@ -1,21 +1,28 @@
 class ServerRequester{
   constructor(){
-    this.xhr = new XMLHttpRequest()
+    this.xhr = new XMLHttpRequest();
   }
-  request_sign_up(){
-
+  // send a request to the server asking if a user exist
+  requestUserExistance(user, reponseCallback){
+    //send the request
+    this.#general_request("../php/server.php", user, "userExistance", reponseCallback);
   }
-  request_login(){
-
+  // send a request to the server asking for the user data
+  requestUserData(user, reponseCallback){
+    //send the request
+    this.#general_request("../php/server.php", user, "userPrivateData", reponseCallback);
   }
-  general_request(server, user){
-    this.xhr.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        // request was successfully sent
-        console.log(this.responseText);
-      }
+  // general request(used internally only)
+  #general_request(serverPath, user, type, callback){
+    // prepare the request data
+    var requestData = {
+      type: type,
+      user: user.getJSONData()
     }
-    this.xhr.open("post", server)
-    this.xhr.send(user.getJSONData())
+    this.xhr.open("post", serverPath);//request setter
+    this.xhr.send(JSON.stringify(requestData)); //send the request
+    this.xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) callback(this.responseText); //is response ready?
+    }
   }
 }

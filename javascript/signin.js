@@ -1,6 +1,9 @@
 var username;
 var password;
+var requester;
+var tempUser;
 window.onload = function(){ //when window is fully loaded
+  requester = new ServerRequester();
   document.getElementById('signin_button').onclick = onSubmit;
 }
 function onSubmit(){
@@ -9,13 +12,17 @@ function onSubmit(){
   if(!username)setError("username can't be empty");
   else if(!password)setError("password can't be empty");
   else{
-    validateUser();
+    tempUser = new User();
+    tempUser.id = (username + password);
+    requester.requestUserExistance(tempUser, serverResponseHandler);
   }
 }
-function validateUser(){
-  // send a request to the server asking if this user exists
-  // if user dont exists set and error and suggest the user to sign up
-  // if the user exists send the user to the account home page
+function serverResponseHandler(response){
+  if(Number(response) == 0) setError("user not found, try to <a href='#' id='link_to'>create an account</a>");
+  else {
+    window.location = ("../pages/home.html");
+    sessionStorage.setItem("userId", tempUser.id);
+  }
 }
 function setError(err){
   document.getElementById('error').innerHTML = err;
