@@ -2,10 +2,10 @@
     class UserManager {
         private $users = [];
         public function add_user($user) {
-            
+          
         }
         public function delete_user($user) {
-            
+
         }
         public function get_users($user) {
             return $this->users;
