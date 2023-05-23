@@ -7,7 +7,7 @@ class ServerRequester{
     //send the request
     this.#general_request("../php/server.php", user, "userExistance", reponseCallback);
   }
-  // send a request to the server asking for the user data
+  // send a request to the server asking for the user private data
   requestUserData(user, reponseCallback){
     //send the request
     this.#general_request("../php/server.php", user, "userPrivateData", reponseCallback);
